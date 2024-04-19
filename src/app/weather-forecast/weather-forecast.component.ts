@@ -18,12 +18,13 @@ export class WeatherForecastComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       const identifier = params['identifier'];
-      this.subscription.add(this.weatherService.getWeatherForecast(identifier).subscribe(data => {
-        this.forecastData = data;
-      }));
-      this.weatherService.getWeatherForecast(identifier).subscribe(data => {
-        this.forecastData = data;
-      });
+      this.subscription.add(
+        this.weatherService.getWeatherForecast(identifier).subscribe(data => {
+          this.forecastData = data;
+        }, error => {
+          // Just print to console
+          console.error(error);}
+        ));
     });
   }
 
