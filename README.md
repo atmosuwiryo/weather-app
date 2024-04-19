@@ -1,27 +1,65 @@
-# WeatherApp
+# Angular Weather Forecast App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+This is a simple Angular application that fetches weather forecast data from an API and visualizes it using Chart.js.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Display weather forecast for District of Columbia and Kansas.
+- Visualize temperature data using a line chart.
+- Clickable options to select weather forecast locations.
 
-## Code scaffolding
+## Requirements
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.js and npm should be installed on your system.
+- Angular CLI should be installed globally.
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone the repository:
 
-## Running unit tests
+```bash
+git clone <repository_url>
+cd weather-app
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Install dependencies:
 
-## Running end-to-end tests
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Usage
 
-## Further help
+1. Run the Angular development server:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+ng serve
+```
+
+2. Navigate to `http://localhost:4200/` in your browser.
+
+3. Click on the weather forecast options to view the corresponding forecast data.
+
+## API
+
+This application fetches weather forecast data from the following API endpoints:
+
+- District of Columbia: [https://api.weather.gov/gridpoints/LWX/31,80/forecast](https://api.weather.gov/gridpoints/LWX/31,80/forecast)
+- Kansas: [https://api.weather.gov/gridpoints/TOP/31,80/forecast](https://api.weather.gov/gridpoints/TOP/31,80/forecast)
+
+## Technologies Used
+
+- Angular
+- Chart.js
+- HTML/CSS
+- TypeScript
+- Eslint
+- Prettier
+
+## Contributing
+
+Contributions are welcome! Feel free to submit a pull request or open an issue.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
