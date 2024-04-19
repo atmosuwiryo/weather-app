@@ -1,0 +1,7 @@
+<div class="weather-forecast-container" *ngIf="forecastData">
+  <h2 class="weather-forecast-header">Weather Forecast</h2>
+  <div class="chart-container">
+    <app-line-chart [chartData]="forecastData"></app-line-chart>
+  </div>
+</div>
+
