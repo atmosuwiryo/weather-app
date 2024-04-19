@@ -1,0 +1,34 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.weather-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-option {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: left;
+  transition: background-color 0.3s;
+}
+
+.weather-option:hover {
+  background-color: #eaeaea;
+}
+
+.weather-option:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #007bff; /* Add a blue outline when focused */
+}

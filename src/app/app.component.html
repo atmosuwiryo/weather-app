@@ -1,6 +1,14 @@
-<ul>
-  <li (click)="navigateToWeather('LWX')">District of Columbia Forecast (LWX)</li>
-  <li (click)="navigateToWeather('TOP')">Kansas Forecast (TOP)</li>
-</ul>
+<div class="container">
+  <h1>Weather Forecast App</h1>
 
-<router-outlet></router-outlet>
+  <div class="weather-options">
+    <button (click)="navigateToWeather('LWX')" class="weather-option">
+      District of Columbia Forecast (LWX)
+    </button>
+    <button (click)="navigateToWeather('TOP')" class="weather-option">
+      Kansas Forecast (TOP)
+    </button>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>

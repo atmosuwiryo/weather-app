@@ -10,6 +10,8 @@ export class LineChartComponent implements OnInit, OnChanges {
   @Input() chartData: any;
   chartInstance: Chart | null = null; // Store the reference to the Chart instance
 
+  // Handle changes to the 'chartData' property
+  // to re-render the chart
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['chartData'] && !changes['chartData'].firstChange) {
       this.renderChart();
@@ -23,7 +25,13 @@ export class LineChartComponent implements OnInit, OnChanges {
     this.renderChart();
   }
 
+  /**
+   * Render the chart
+   * - Destroy the existing chart instance
+   * - Create a new chart instance
+   */
   renderChart(): void {
+    // Instance must be destroyed before re-rendering
     if (this.chartInstance) {
       this.chartInstance.destroy(); // Destroy existing chart instance
     }
@@ -48,15 +56,15 @@ export class LineChartComponent implements OnInit, OnChanges {
       options: {
         responsive: true,
         maintainAspectRatio: false,
-      plugins: {
-        tooltip: {
-          mode: 'index',
-          intersect: false
+        plugins: {
+          tooltip: {
+            mode: 'index',
+            intersect: false
+          },
+          legend: {
+            display: false
+          }
         },
-        legend: {
-          display: false
-        }
-      },
       }
     });
   }
